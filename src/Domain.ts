@@ -23,7 +23,7 @@ export default class Domain {
             return Similarity.SIMILAR;
         } else {
             const rate = 0.5;
-            const len = this.fullDomain.length;
+            const len = Math.max(this.fullDomain.length, other.fullDomain.length);
             const distance = levenshteinDistance(this.domain, other.domain);
             return (distance < len * rate) ? Similarity.SIMILAR : Similarity.DIFFERENT;
         }
