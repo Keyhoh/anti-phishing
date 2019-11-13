@@ -8,6 +8,6 @@
 
 `npm run build`
 
-## execution
+## execute
 
 `node ./dist/index.js https://target.com`
