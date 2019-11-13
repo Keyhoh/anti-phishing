@@ -2,7 +2,6 @@ import parseDomain from "parse-domain";
 import { Similarity } from "./Similarity";
 import levenshteinDistance from "./levenshteinDistance";
 export default class Domain {
-    private static a = 1;
     private fullDomain = "";
     private domain = "";
     private tld = "";
