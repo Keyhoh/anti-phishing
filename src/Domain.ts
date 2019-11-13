@@ -12,13 +12,15 @@ export default class Domain {
         if (temp != null) {
             this.domain = temp.domain;
             this.tld = temp.tld;
+            this.fullDomain = `${this.domain}.${this.tld}`;
         }
-        this.fullDomain = `${this.domain}.${this.tld}`;
     }
 
     public similarlyWith(other: Domain): Similarity {
         if (this.fullDomain === other.fullDomain) {
             return Similarity.SAME;
+        } else if (this.fullDomain === "" || other.fullDomain === "") {
+            return Similarity.DIFFERENT;
         } else if (this.domain === other.domain) {
             return Similarity.SIMILAR;
         } else {
