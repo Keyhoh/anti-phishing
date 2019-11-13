@@ -1,24 +1,12 @@
 import Domain from "./Domain";
-import { Similarity } from "./Similarity";
 
 import { whiteList } from "./whiteList";
+import Result from "./Result";
 
-const target = new Domain(process.argv[2]);
-console.info(`inspection target: ${process.argv[2]}`);
-
-for (let url of whiteList.urls) {
-    const result = new Domain(url).similarlyWith(target);
-    console.info(`url: ${url}`);
-    switch (result) {
-        case Similarity.SAME:
-            console.log("Same!");
-            break;
-        case Similarity.SIMILAR:
-            console.log("Warning!");
-            break;
-        case Similarity.DIFFERENT:
-            console.log("Different!");
-        default:
-            break;
-    }
-}
+module.exports.check = (url: string) =>
+    whiteList.sites.map(site =>
+        new Result(
+            site.url,
+            site.title,
+            new Domain(site.url).similarlyWith(new Domain(url)))
+    );

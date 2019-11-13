@@ -1,5 +1,5 @@
-export enum Similarity{
-    SAME,
-    SIMILAR,
-    DIFFERENT,
+export enum Similarity {
+    SAME = "SAME",
+    SIMILAR = "SIMILAR",
+    DIFFERENT = "DIFFERENT",
 }
