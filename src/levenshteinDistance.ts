@@ -1,4 +1,4 @@
-export default function levenshteinDistance(a: string, b: string) {
+export default function levenshteinDistance(a: string, b: string): number {
     // Create empty edit distance matrix.
     // ex) a = Arcana, b = Brian
     // |\|    | A  | r  | c  | a  | n  | a  |
@@ -55,6 +55,3 @@ export default function levenshteinDistance(a: string, b: string) {
 
     return distanceMatrix[b.length][a.length];
 }
-
-console.log(levenshteinDistance('smbc.co.jp', ''));
-console.log(levenshteinDistance('smbc.co.jp', 'smbcas.com'));
