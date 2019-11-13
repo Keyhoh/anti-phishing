@@ -3,10 +3,12 @@ import { Similarity } from "./Similarity";
 
 import { whiteList } from "./whiteList";
 
-const target = new Domain(process.argv[2].toString());
+const target = new Domain(process.argv[2]);
+console.info(`inspection target: ${process.argv[2]}`);
 
 for (let url of whiteList.urls) {
     const result = new Domain(url).similarlyWith(target);
+    console.info(`url: ${url}`);
     switch (result) {
         case Similarity.SAME:
             console.log("Same!");
