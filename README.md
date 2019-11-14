@@ -9,4 +9,4 @@
 
 ## execute
 
-[chrome拡張機能](chrome://extensions/)でデベロッパーモードを有効にし、拡張機能を読み込んでください。
+[chrome拡張機能](chrome://extensions/)でデベロッパーモードを有効にし、拡張機能（${workDir}/extension）を読み込んでください。
