@@ -8,5 +8,5 @@ module.exports.check = (url: string) =>
         new Result(
             site.url,
             site.title,
-            new Domain(site.url).similarlyWith(new Domain(url)))
+            new Domain(site.url).similarlyTo(new Domain(url)))
     );

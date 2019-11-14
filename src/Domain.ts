@@ -13,7 +13,7 @@ export default class Domain {
         }
     }
 
-    public similarlyWith(other: Domain): Similarity {
+    public similarlyTo(other: Domain): Similarity {
         if (this.domain === other.domain && this.tld === other.tld) {
             return Similarity.SAME;
         } else if (this.domain === other.domain) {
