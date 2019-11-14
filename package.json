@@ -10,7 +10,7 @@
     "build": "npm run build:types && npm run build:js && npm run bundle",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "bundle": "browserify main.js -o ./bundle.js"
+    "bundle": "browserify main.js -o ./extension/bundle.js"
   },
   "keywords": [],
   "author": "",
