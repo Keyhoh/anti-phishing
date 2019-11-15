@@ -10,3 +10,5 @@
 ## execute
 
 [chrome拡張機能](chrome://extensions/)でデベロッパーモードを有効にし、拡張機能（${workDir}/extension）を読み込んでください。
+
+[chrome store](https://chrome.google.com/webstore/detail/bfeabegodlanlchpijhpjhaklommbhfe/publish-delayed?hl=ja)
