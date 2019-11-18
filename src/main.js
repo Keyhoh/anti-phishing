@@ -1,4 +1,4 @@
-const antiPhishing = require("./lib");
+const antiPhishing = require("../lib");
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.status === 'complete') {
         const resultList = antiPhishing.check(tab.url);

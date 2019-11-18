@@ -1,4 +1,5 @@
 node_modules
 lib
 !/src/lib
-/extension/bundle.js
+/extension
+!/extension/manifest.json
